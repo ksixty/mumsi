@@ -148,7 +148,7 @@ namespace sip {
         boost::replace_all(address, ">", "");
 
         if (ci.state == PJSIP_INV_STATE_CONFIRMED) {
-            auto msgText = "Incoming call from " + address + ".";
+            auto msgText = "Incoming call from anonymous lox over telephony.";
 
             // first, login to Mumble (only matters if MUM_DELAYED_CONNECT)
             communicator.calls[ci.id].onConnect(address);
