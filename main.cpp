@@ -251,9 +251,7 @@ int main(int argc, char *argv[]) {
                 _1, _2, _3, _4, _5);
 
         // Handle Channel State messages from Mumble
-        mumcom->onIncom
-
-          ingChannelState = std::bind(
+        mumcom->onIncomingChannelState = std::bind(
                 &mumble::MumbleChannelJoiner::checkChannel,
                 &mumbleChannelJoiner,
                 _1, _2);
